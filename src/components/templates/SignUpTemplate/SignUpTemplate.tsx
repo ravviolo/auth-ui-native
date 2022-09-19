@@ -1,5 +1,6 @@
 import { Flex } from 'components/atoms';
 import { AuthFooter, AuthHeader } from 'components/molecules';
+import { SignUpForm } from 'components/organisms';
 import { StatusBar, StyleSheet } from 'react-native';
 import { colors } from 'theme';
 
@@ -31,6 +32,7 @@ export const SignUpTemplate = ({
       <StatusBar backgroundColor={colors.background} barStyle="dark-content" />
       <Flex direction="column" style={styles.container} testID={testID}>
         <AuthHeader testID="auth-header-signup-template-test-id" title={headerText} />
+        <SignUpForm testID="signup-form-test-id" onSubmitSignUpForm={onSubmitSignUpForm} />
 
         <AuthFooter
           btnText={footerBtnText}
