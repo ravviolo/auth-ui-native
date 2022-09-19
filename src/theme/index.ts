@@ -13,5 +13,5 @@ export const colors: Colors = {
   textWhite: '#EDEDED',
   primary: '#FF4684',
   primaryDark: '#F9256C',
-  background: '#5F9CC8',
+  background: '#fff',
 };
