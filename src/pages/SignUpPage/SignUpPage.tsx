@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { Button, StyleSheet, Text, View } from 'react-native';
+import { SignUpTemplate } from 'components/templates';
 
 interface Props {
   navigate: React.Dispatch<React.SetStateAction<'login' | 'signup'>>;
@@ -33,17 +33,16 @@ export const SignUpPage = ({ navigate }: Props) => {
   };
 
   return (
-    <View style={styles.container}>
-      <Text>SignUpPage</Text>
-      <Button title="Change page" onPress={handleNavigate} />
-    </View>
+    <SignUpTemplate
+      footerBtnText="Login"
+      footerText="Already a user?"
+      headerText="Sign Up"
+      testID="signup-template-test-id"
+      onClickFacebook={handleSignUpViaFacebook}
+      onClickFooterBtn={handleNavigate}
+      onClickGoogle={handleSignUpViaGoogle}
+      onClickLinkedIn={handleSignUpViaLinkedIn}
+      onSubmitSignUpForm={handleSignUpFormSubmit}
+    />
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    alignItems: 'center',
-    flex: 1,
-    justifyContent: 'center',
-  },
-});
