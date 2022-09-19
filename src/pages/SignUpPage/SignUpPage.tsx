@@ -38,10 +38,10 @@ export const SignUpPage = ({ navigate }: Props) => {
       footerText="Already a user?"
       headerText="Sign Up"
       testID="signup-template-test-id"
-      onClickFacebook={handleSignUpViaFacebook}
-      onClickFooterBtn={handleNavigate}
-      onClickGoogle={handleSignUpViaGoogle}
-      onClickLinkedIn={handleSignUpViaLinkedIn}
+      onPressFacebook={handleSignUpViaFacebook}
+      onPressFooterBtn={handleNavigate}
+      onPressGoogle={handleSignUpViaGoogle}
+      onPressLinkedIn={handleSignUpViaLinkedIn}
       onSubmitSignUpForm={handleSignUpFormSubmit}
     />
   );

@@ -6,10 +6,10 @@ interface Props {
   text: string;
   btnText: string;
   testID: string;
-  onClick: () => void;
+  onPress: () => void;
 }
 
-export const AuthFooter = ({ btnText, testID, onClick, text }: Props) => {
+export const AuthFooter = ({ btnText, testID, onPress, text }: Props) => {
   return (
     <Flex direction="row" style={styles.footerContainer} testID={testID}>
       <Text style={styles.footerChild}>{text}</Text>
@@ -17,7 +17,7 @@ export const AuthFooter = ({ btnText, testID, onClick, text }: Props) => {
         style={[styles.footerChild, styles.footerBtn]}
         testID={testID}
         title={btnText}
-        onPress={onClick}
+        onPress={onPress}
       />
     </Flex>
   );

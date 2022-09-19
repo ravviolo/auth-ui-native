@@ -6,10 +6,10 @@ import { colors } from 'theme';
 
 interface Props {
   onSubmitSignUpForm: (email: string, password: string) => void;
-  onClickGoogle: () => void;
-  onClickFacebook: () => void;
-  onClickLinkedIn: () => void;
-  onClickFooterBtn: () => void;
+  onPressGoogle: () => void;
+  onPressFacebook: () => void;
+  onPressLinkedIn: () => void;
+  onPressFooterBtn: () => void;
   headerText: string;
   footerText: string;
   footerBtnText: string;
@@ -17,11 +17,11 @@ interface Props {
 }
 
 export const SignUpTemplate = ({
-  onClickFacebook,
-  onClickGoogle,
-  onClickLinkedIn,
+  onPressFacebook,
+  onPressGoogle,
+  onPressLinkedIn,
   onSubmitSignUpForm,
-  onClickFooterBtn,
+  onPressFooterBtn,
   footerBtnText,
   footerText,
   headerText,
@@ -38,7 +38,7 @@ export const SignUpTemplate = ({
           btnText={footerBtnText}
           testID="auth-footer-signup-template-test-id"
           text={footerText}
-          onClick={onClickFooterBtn}
+          onPress={onPressFooterBtn}
         />
       </Flex>
     </>

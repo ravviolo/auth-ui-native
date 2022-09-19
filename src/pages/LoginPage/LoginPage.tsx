@@ -10,10 +10,15 @@ export const LoginPage = ({ navigate }: Props) => {
     navigate('signup');
   };
 
-  const handleLoginFormSubmit = (email: string, password: string): void => {
+  const handleLoginFormSubmit = (
+    email: string,
+    password: string,
+    rememberPassword: boolean
+  ): void => {
     const userCredentials = {
       email,
       password,
+      rememberPassword,
     };
 
     console.log('Logging user...');
@@ -42,11 +47,11 @@ export const LoginPage = ({ navigate }: Props) => {
       footerText="Need an account?"
       headerText="Login"
       testID="login-template-test-id"
-      onClickFacebook={handleLoginViaFacebook}
-      onClickFooterBtn={handleNavigate}
-      onClickGoogle={handleLoginViaGoogle}
-      onClickLinkedIn={handleLoginViaLinkedIn}
-      onClickResetPassword={handleResetPassword}
+      onPressFacebook={handleLoginViaFacebook}
+      onPressFooterBtn={handleNavigate}
+      onPressGoogle={handleLoginViaGoogle}
+      onPressLinkedIn={handleLoginViaLinkedIn}
+      onPressResetPassword={handleResetPassword}
       onSubmitLoginForm={handleLoginFormSubmit}
     />
   );

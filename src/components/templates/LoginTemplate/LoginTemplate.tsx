@@ -1,15 +1,16 @@
 import { Flex } from 'components/atoms';
 import { AuthFooter, AuthHeader } from 'components/molecules';
+import { LoginForm } from 'components/organisms';
 import { StatusBar, StyleSheet } from 'react-native';
 import { colors } from 'theme';
 
 interface Props {
-  onSubmitLoginForm: (email: string, password: string) => void;
-  onClickResetPassword: () => void;
-  onClickGoogle: () => void;
-  onClickFacebook: () => void;
-  onClickLinkedIn: () => void;
-  onClickFooterBtn: () => void;
+  onSubmitLoginForm: (email: string, password: string, rememberPassword: boolean) => void;
+  onPressResetPassword: () => void;
+  onPressGoogle: () => void;
+  onPressFacebook: () => void;
+  onPressLinkedIn: () => void;
+  onPressFooterBtn: () => void;
   headerText: string;
   footerText: string;
   footerBtnText: string;
@@ -17,12 +18,12 @@ interface Props {
 }
 
 export const LoginTemplate = ({
-  onClickFacebook,
-  onClickGoogle,
-  onClickLinkedIn,
+  onPressFacebook,
+  onPressGoogle,
+  onPressLinkedIn,
   onSubmitLoginForm,
-  onClickResetPassword,
-  onClickFooterBtn,
+  onPressResetPassword,
+  onPressFooterBtn,
   footerBtnText,
   footerText,
   headerText,
@@ -34,11 +35,16 @@ export const LoginTemplate = ({
       <Flex direction="column" style={styles.container} testID={testID}>
         <AuthHeader testID="auth-header-login-template-test-id" title={headerText} />
 
+        <LoginForm
+          testID="login-form-test-id"
+          onPressResetPassword={onPressResetPassword}
+          onSubmitLoginForm={onSubmitLoginForm}
+        />
         <AuthFooter
           btnText={footerBtnText}
           testID="auth-footer-login-template-test-id"
           text={footerText}
-          onClick={onClickFooterBtn}
+          onPress={onPressFooterBtn}
         />
       </Flex>
     </>
