@@ -1,4 +1,4 @@
-import { Flex } from 'components/atoms';
+import { Divider, Flex } from 'components/atoms';
 import { AuthFooter, AuthHeader } from 'components/molecules';
 import { SignUpForm } from 'components/organisms';
 import { StatusBar, StyleSheet } from 'react-native';
@@ -33,6 +33,7 @@ export const SignUpTemplate = ({
       <Flex direction="column" style={styles.container} testID={testID}>
         <AuthHeader testID="auth-header-signup-template-test-id" title={headerText} />
         <SignUpForm testID="signup-form-test-id" onSubmitSignUpForm={onSubmitSignUpForm} />
+        <Divider label="OR" testID="divider-signup-test-id" />
 
         <AuthFooter
           btnText={footerBtnText}
@@ -50,7 +51,7 @@ const styles = StyleSheet.create({
     borderColor: colors.primaryDark,
     borderWidth: 2,
     flex: 1,
-    justifyContent: 'space-between',
+    justifyContent: 'space-evenly',
     padding: 50,
   },
 });

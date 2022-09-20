@@ -1,4 +1,4 @@
-import { Flex } from 'components/atoms';
+import { Divider, Flex } from 'components/atoms';
 import { AuthFooter, AuthHeader } from 'components/molecules';
 import { LoginForm } from 'components/organisms';
 import { StatusBar, StyleSheet } from 'react-native';
@@ -40,6 +40,8 @@ export const LoginTemplate = ({
           onPressResetPassword={onPressResetPassword}
           onSubmitLoginForm={onSubmitLoginForm}
         />
+
+        <Divider label="OR" testID="divider-login-test-id" />
         <AuthFooter
           btnText={footerBtnText}
           testID="auth-footer-login-template-test-id"
