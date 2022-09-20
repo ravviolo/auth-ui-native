@@ -1,5 +1,5 @@
 import { Flex, IconButton } from 'components/atoms';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet } from 'react-native';
 
 interface Props {
   testID: string;
