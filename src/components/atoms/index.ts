@@ -8,3 +8,4 @@ export type { TextInputHandle } from './InputField/InputField';
 export { InputLabel } from './InputLabel/InputLabel';
 export { TextButton } from './TextButton/TextButton';
 export { Divider } from './Divider/Divider';
+export { IconButton } from './IconButton/IconButton';
