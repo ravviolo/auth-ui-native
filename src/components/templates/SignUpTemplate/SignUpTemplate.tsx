@@ -1,5 +1,5 @@
 import { Divider, Flex } from 'components/atoms';
-import { AuthFooter, AuthHeader } from 'components/molecules';
+import { AuthFooter, AuthHeader, AuthSocials } from 'components/molecules';
 import { SignUpForm } from 'components/organisms';
 import { StatusBar, StyleSheet } from 'react-native';
 import { colors } from 'theme';
@@ -34,7 +34,12 @@ export const SignUpTemplate = ({
         <AuthHeader testID="auth-header-signup-template-test-id" title={headerText} />
         <SignUpForm testID="signup-form-test-id" onSubmitSignUpForm={onSubmitSignUpForm} />
         <Divider label="OR" testID="divider-signup-test-id" />
-
+        <AuthSocials
+          testID="auth-socials-signup-template-test-id"
+          onPressFacebook={onPressFacebook}
+          onPressGoogle={onPressGoogle}
+          onPressLinkedIn={onPressLinkedIn}
+        />
         <AuthFooter
           btnText={footerBtnText}
           testID="auth-footer-signup-template-test-id"

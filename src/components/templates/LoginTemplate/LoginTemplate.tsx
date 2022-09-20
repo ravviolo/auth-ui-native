@@ -1,5 +1,5 @@
 import { Divider, Flex } from 'components/atoms';
-import { AuthFooter, AuthHeader } from 'components/molecules';
+import { AuthFooter, AuthHeader, AuthSocials } from 'components/molecules';
 import { LoginForm } from 'components/organisms';
 import { StatusBar, StyleSheet } from 'react-native';
 import { colors } from 'theme';
@@ -42,6 +42,12 @@ export const LoginTemplate = ({
         />
 
         <Divider label="OR" testID="divider-login-test-id" />
+        <AuthSocials
+          testID="auth-socials-login-template-test-id"
+          onPressFacebook={onPressFacebook}
+          onPressGoogle={onPressGoogle}
+          onPressLinkedIn={onPressLinkedIn}
+        />
         <AuthFooter
           btnText={footerBtnText}
           testID="auth-footer-login-template-test-id"
