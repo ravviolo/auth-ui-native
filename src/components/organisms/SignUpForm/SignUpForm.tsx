@@ -33,7 +33,7 @@ export const SignUpForm = ({ onSubmitSignUpForm, testID }: Props) => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 0.25,
+    flex: 1,
     justifyContent: 'space-between',
   },
 });
