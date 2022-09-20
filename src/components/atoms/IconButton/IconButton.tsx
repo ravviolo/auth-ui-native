@@ -26,11 +26,11 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     height: 50,
     justifyContent: 'center',
-    padding: 5,
+    padding: 8,
     width: 50,
   },
   icon: {
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: 'bold',
   },
 });

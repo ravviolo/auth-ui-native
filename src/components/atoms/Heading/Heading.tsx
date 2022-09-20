@@ -17,7 +17,8 @@ export const Heading = ({ title, testID }: Props) => {
 const styles = StyleSheet.create({
   heading: {
     color: colors.text,
-    fontSize: 16,
+    fontSize: 18,
+    fontWeight: 'bold',
     textTransform: 'uppercase',
   },
 });
