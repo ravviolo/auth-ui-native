@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     width: 130,
   },
   container: {
-    flex: 0.33,
+    flex: 1,
     justifyContent: 'space-between',
   },
   secondaryButton: {
