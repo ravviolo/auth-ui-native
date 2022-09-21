@@ -33,8 +33,6 @@ const styles = StyleSheet.create({
     marginHorizontal: 2,
   },
   footerContainer: {
-    alignItems: 'center',
-    flex: 1,
     justifyContent: 'center',
   },
 });

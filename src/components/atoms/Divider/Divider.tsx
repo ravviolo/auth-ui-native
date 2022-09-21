@@ -18,7 +18,6 @@ export const Divider = ({ label, testID }: Props) => {
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
-    flex: 1,
     justifyContent: 'center',
   },
   label: {
