@@ -67,6 +67,7 @@ export const LoginTemplate = ({
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: colors.background,
     justifyContent: 'space-between',
     minHeight: '100%',
     paddingHorizontal: 30,
