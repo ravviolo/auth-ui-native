@@ -5,7 +5,7 @@ import { RootStackParamList } from 'navigator';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Login'>;
 
-export const LoginPage = ({ navigation }: Props) => {
+export const LoginScreen = ({ navigation }: Props) => {
   const handleNavigate = () => {
     navigation.navigate('SignUp');
   };

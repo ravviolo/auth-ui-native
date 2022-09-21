@@ -1,6 +1,6 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { LoginPage, SignUpPage } from 'pages';
+import { LoginScreen, SignUpScreen } from 'screens';
 
 export interface RootStackParamList extends Record<string, object | undefined> {
   Login: undefined;
@@ -14,14 +14,14 @@ export const Navigator = () => {
     <NavigationContainer>
       <RootStack.Navigator initialRouteName="Login">
         <RootStack.Screen
-          component={LoginPage}
+          component={LoginScreen}
           name="Login"
           options={{
             headerShown: false,
           }}
         />
         <RootStack.Screen
-          component={SignUpPage}
+          component={SignUpScreen}
           name="SignUp"
           options={{
             headerShown: false,
