@@ -1,13 +1,13 @@
 /* eslint-disable no-console */
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { LoginTemplate } from 'components/templates';
+import { RootStackParamList } from 'navigator';
 
-interface Props {
-  navigate: React.Dispatch<React.SetStateAction<'login' | 'signup'>>;
-}
+type Props = NativeStackScreenProps<RootStackParamList, 'Login'>;
 
-export const LoginPage = ({ navigate }: Props) => {
+export const LoginPage = ({ navigation }: Props) => {
   const handleNavigate = () => {
-    navigate('signup');
+    navigation.navigate('SignUp');
   };
 
   const handleLoginFormSubmit = (

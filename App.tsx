@@ -1,10 +1,7 @@
-import { LoginPage, SignUpPage } from 'pages';
-import { useState } from 'react';
+import { Navigator } from 'navigator';
 
 const App = () => {
-  const [page, setPage] = useState<'login' | 'signup'>('signup');
-
-  return page === 'login' ? <LoginPage navigate={setPage} /> : <SignUpPage navigate={setPage} />;
+  return <Navigator />;
 };
 
 export default App;
