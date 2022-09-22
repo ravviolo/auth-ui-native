@@ -1,0 +1,152 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuthSocials should match snapshot 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+      },
+      Object {
+        "alignItems": "center",
+        "justifyContent": "space-around",
+        "paddingHorizontal": 55,
+      },
+    ]
+  }
+  testID="auth-socials-test-id"
+>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderRadius": 100,
+          "borderWidth": 2,
+          "height": 50,
+          "justifyContent": "center",
+          "padding": 8,
+          "width": 50,
+        },
+        Object {
+          "borderColor": "#DB4437",
+        },
+      ]
+    }
+    testID="icon-btn-Google-test-id"
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "fontSize": 20,
+            "fontWeight": "bold",
+          },
+          Object {
+            "color": "#DB4437",
+          },
+        ]
+      }
+    >
+      G
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderRadius": 100,
+          "borderWidth": 2,
+          "height": 50,
+          "justifyContent": "center",
+          "padding": 8,
+          "width": 50,
+        },
+        Object {
+          "borderColor": "#4267B2",
+        },
+      ]
+    }
+    testID="icon-btn-Facebook-test-id"
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "fontSize": 20,
+            "fontWeight": "bold",
+          },
+          Object {
+            "color": "#4267B2",
+          },
+        ]
+      }
+    >
+      f
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderRadius": 100,
+          "borderWidth": 2,
+          "height": 50,
+          "justifyContent": "center",
+          "padding": 8,
+          "width": 50,
+        },
+        Object {
+          "borderColor": "#0077B5",
+        },
+      ]
+    }
+    testID="icon-btn-LinkedIn-test-id"
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "fontSize": 20,
+            "fontWeight": "bold",
+          },
+          Object {
+            "color": "#0077B5",
+          },
+        ]
+      }
+    >
+      in
+    </Text>
+  </View>
+</View>
+`;

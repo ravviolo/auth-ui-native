@@ -1,7 +1,7 @@
 import { Flex, IconButton } from 'components/atoms';
 import { StyleSheet } from 'react-native';
 
-interface Props {
+export interface Props {
   testID: string;
   onPressGoogle: () => void;
   onPressFacebook: () => void;
