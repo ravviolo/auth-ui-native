@@ -1,7 +1,7 @@
 import { StyleSheet, Text } from 'react-native';
 import { colors } from 'theme';
 
-interface Props {
+export interface Props {
   title: string;
   testID: string;
 }
