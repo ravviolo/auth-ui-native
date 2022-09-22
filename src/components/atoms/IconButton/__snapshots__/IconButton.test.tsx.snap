@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IconButton should match snapshot 1`] = `
+<View
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "borderRadius": 100,
+        "borderWidth": 2,
+        "height": 50,
+        "justifyContent": "center",
+        "padding": 8,
+        "width": 50,
+      },
+      Object {
+        "borderColor": "cyan",
+      },
+    ]
+  }
+  testID="icon-btn-test-id"
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "fontSize": 20,
+          "fontWeight": "bold",
+        },
+        Object {
+          "color": "cyan",
+        },
+      ]
+    }
+  >
+    I
+  </Text>
+</View>
+`;

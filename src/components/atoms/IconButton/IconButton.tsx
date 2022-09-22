@@ -1,6 +1,6 @@
 import { StyleSheet, Text, TouchableHighlight } from 'react-native';
 
-interface Props {
+export interface Props {
   icon: string;
   color: string;
   testID: string;
