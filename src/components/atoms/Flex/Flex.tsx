@@ -1,6 +1,6 @@
 import { StyleProp, StyleSheet, View, ViewStyle } from 'react-native';
 
-interface Props {
+export interface Props {
   children: React.ReactNode;
   direction: 'column' | 'row';
   testID: string;

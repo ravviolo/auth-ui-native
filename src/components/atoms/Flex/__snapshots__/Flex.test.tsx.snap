@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Flex should match snapshot - apply styles 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+      },
+      Object {
+        "backgroundColor": "#FF4684",
+      },
+    ]
+  }
+  testID="flex-test-id"
+>
+  <li />
+  <li />
+  <li />
+  <li />
+  <li />
+  <li />
+  <li />
+  <li />
+  <li />
+  <li />
+</View>
+`;
+
+exports[`Flex should match snapshot - render all children horizontally 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+      },
+      undefined,
+    ]
+  }
+  testID="flex-test-id"
+>
+  <li />
+  <li />
+  <li />
+  <li />
+  <li />
+  <li />
+  <li />
+  <li />
+  <li />
+  <li />
+</View>
+`;
+
+exports[`Flex should match snapshot - render all children vertically 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "column",
+      },
+      undefined,
+    ]
+  }
+  testID="flex-test-id"
+>
+  <li />
+  <li />
+  <li />
+  <li />
+  <li />
+  <li />
+  <li />
+  <li />
+  <li />
+  <li />
+</View>
+`;
