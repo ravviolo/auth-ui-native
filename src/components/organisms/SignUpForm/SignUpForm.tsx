@@ -3,7 +3,7 @@ import { EmailInput, PasswordInput } from 'components/molecules';
 import { useRef } from 'react';
 import { StyleSheet } from 'react-native';
 
-interface Props {
+export interface Props {
   onSubmitSignUpForm: (email: string, password: string) => void;
   testID: string;
 }

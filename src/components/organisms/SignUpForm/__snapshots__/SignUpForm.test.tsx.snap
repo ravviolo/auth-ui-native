@@ -1,0 +1,126 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignUpForm should match snapshot 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "column",
+      },
+      Object {
+        "flex": 1,
+        "justifyContent": "space-between",
+      },
+    ]
+  }
+  testID="signup-form-test-id"
+>
+  <View
+    testID="email-input-signup-form-test-id"
+  >
+    <Text
+      style={
+        Object {
+          "color": "#3D3D3D",
+          "marginBottom": 3,
+        }
+      }
+      testID="input-label-email-test-id"
+    >
+      Email
+    </Text>
+    <TextInput
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      secureTextEntry={false}
+      style={
+        Array [
+          Object {
+            "borderColor": "#9E9E9E",
+            "borderRadius": 8,
+            "borderWidth": 1,
+            "height": 40,
+            "padding": 10,
+          },
+          Object {
+            "borderColor": "#9E9E9E",
+          },
+        ]
+      }
+      testID="input-field-email-test-id"
+      value=""
+    />
+  </View>
+  <View
+    testID="password-input-signup-form-test-id"
+  >
+    <Text
+      style={
+        Object {
+          "color": "#3D3D3D",
+          "marginBottom": 3,
+        }
+      }
+      testID="input-label-password-test-id"
+    >
+      Password
+    </Text>
+    <TextInput
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      secureTextEntry={true}
+      style={
+        Array [
+          Object {
+            "borderColor": "#9E9E9E",
+            "borderRadius": 8,
+            "borderWidth": 1,
+            "height": 40,
+            "padding": 10,
+          },
+          Object {
+            "borderColor": "#9E9E9E",
+          },
+        ]
+      }
+      testID="input-field-password-test-id"
+      value=""
+    />
+  </View>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#FF4684",
+        "borderRadius": 10,
+        "elevation": 5,
+        "padding": 15,
+      }
+    }
+    testID="btn-submit-signup-test-id"
+  >
+    <Text
+      style={
+        Object {
+          "color": "#EDEDED",
+          "letterSpacing": 1,
+          "textTransform": "uppercase",
+        }
+      }
+    >
+      Sign Up
+    </Text>
+  </View>
+</View>
+`;
