@@ -12,7 +12,7 @@ import { useRef } from 'react';
 import { StyleSheet } from 'react-native';
 import { colors } from 'theme';
 
-interface Props {
+export interface Props {
   testID: string;
   onSubmitLoginForm: (email: string, password: string, rememberPassword: boolean) => void;
   onPressResetPassword: () => void;
