@@ -1,4 +1,4 @@
-name: Run ESlint on Push and PR
+name: Linting
 
 on:
   - pull_request
