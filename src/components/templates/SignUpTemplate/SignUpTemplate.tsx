@@ -4,7 +4,7 @@ import { SignUpForm } from 'components/organisms';
 import { KeyboardAvoidingView, ScrollView, StatusBar, StyleSheet, View } from 'react-native';
 import { colors } from 'theme';
 
-interface Props {
+export interface Props {
   onSubmitSignUpForm: (email: string, password: string) => void;
   onPressGoogle: () => void;
   onPressFacebook: () => void;
