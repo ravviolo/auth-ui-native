@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EmailInput should match snapshot 1`] = `
+<View
+  testID="email-input-test-id"
+>
+  <Text
+    style={
+      Object {
+        "color": "#3D3D3D",
+        "marginBottom": 3,
+      }
+    }
+    testID="input-label-email-test-id"
+  >
+    Email
+  </Text>
+  <TextInput
+    onBlur={[Function]}
+    onChangeText={[Function]}
+    onFocus={[Function]}
+    secureTextEntry={false}
+    style={
+      Array [
+        Object {
+          "borderColor": "#9E9E9E",
+          "borderRadius": 8,
+          "borderWidth": 1,
+          "height": 40,
+          "padding": 10,
+        },
+        Object {
+          "borderColor": "#9E9E9E",
+        },
+      ]
+    }
+    testID="input-field-email-test-id"
+    value=""
+  />
+</View>
+`;
