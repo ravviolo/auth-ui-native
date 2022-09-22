@@ -1,6 +1,6 @@
 import { StyleProp, Text, TextStyle, TouchableOpacity } from 'react-native';
 
-interface Props {
+export interface Props {
   title: string;
   testID: string;
   onPress: () => void;
