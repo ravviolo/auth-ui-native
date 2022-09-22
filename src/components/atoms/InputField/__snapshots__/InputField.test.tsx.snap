@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputField should match snapshot 1`] = `
+<TextInput
+  onBlur={[Function]}
+  onChangeText={[Function]}
+  onFocus={[Function]}
+  secureTextEntry={false}
+  style={
+    Array [
+      Object {
+        "borderColor": "#9E9E9E",
+        "borderRadius": 8,
+        "borderWidth": 1,
+        "height": 40,
+        "padding": 10,
+      },
+      Object {
+        "borderColor": "#9E9E9E",
+      },
+    ]
+  }
+  testID="input-field-test-id"
+  value=""
+/>
+`;

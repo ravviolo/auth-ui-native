@@ -2,7 +2,7 @@ import { forwardRef, useImperativeHandle, useState } from 'react';
 import { StyleSheet, TextInput } from 'react-native';
 import { colors } from 'theme';
 
-interface Props {
+export interface Props {
   testID: string;
   secureTextEntry?: boolean;
 }
