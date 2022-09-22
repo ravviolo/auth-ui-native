@@ -1,7 +1,7 @@
 import { StyleSheet, Text, TouchableHighlight } from 'react-native';
 import { colors } from 'theme';
 
-interface Props {
+export interface Props {
   title: string;
   testID: string;
   onPress: () => void;
