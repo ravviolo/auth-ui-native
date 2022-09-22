@@ -2,7 +2,7 @@ import { InputField, InputLabel, TextInputHandle } from 'components/atoms';
 import { forwardRef } from 'react';
 import { View } from 'react-native';
 
-interface Props {
+export interface Props {
   testID: string;
 }
 
