@@ -1,7 +1,7 @@
 import { Heading } from 'components/atoms';
 import { View } from 'react-native';
 
-interface Props {
+export interface Props {
   title: string;
   testID: string;
 }

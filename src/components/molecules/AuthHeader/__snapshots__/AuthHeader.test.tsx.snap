@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuthHeader should match snapshot 1`] = `
+<View
+  testID="auth-header-test-id"
+>
+  <Text
+    style={
+      Object {
+        "color": "#3D3D3D",
+        "fontSize": 18,
+        "fontWeight": "bold",
+        "textTransform": "uppercase",
+      }
+    }
+    testID="auth-heading-test-id"
+  >
+    Header
+  </Text>
+</View>
+`;
