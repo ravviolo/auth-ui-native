@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputLabel should match snapshot 1`] = `
+<Text
+  style={
+    Object {
+      "color": "#3D3D3D",
+      "marginBottom": 3,
+    }
+  }
+  testID="label-test-id"
+>
+  Label
+</Text>
+`;

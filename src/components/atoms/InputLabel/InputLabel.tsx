@@ -1,18 +1,16 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text } from 'react-native';
 import { colors } from 'theme';
 
-interface Props {
+export interface Props {
   testID: string;
   label: string;
 }
 
 export const InputLabel = ({ label, testID }: Props) => {
   return (
-    <View>
-      <Text style={styles.label} testID={testID}>
-        {label}
-      </Text>
-    </View>
+    <Text style={styles.label} testID={testID}>
+      {label}
+    </Text>
   );
 };
 
