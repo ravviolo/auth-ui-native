@@ -2,7 +2,7 @@ import { Flex, TextButton } from 'components/atoms';
 import { StyleSheet, Text } from 'react-native';
 import { colors } from 'theme';
 
-interface Props {
+export interface Props {
   text: string;
   btnText: string;
   testID: string;
@@ -15,7 +15,7 @@ export const AuthFooter = ({ btnText, testID, onPress, text }: Props) => {
       <Text style={styles.footerChild}>{text}</Text>
       <TextButton
         style={[styles.footerChild, styles.footerBtn]}
-        testID={testID}
+        testID="btn-footer-test-id"
         title={btnText}
         onPress={onPress}
       />

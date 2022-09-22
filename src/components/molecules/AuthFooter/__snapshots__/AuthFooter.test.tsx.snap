@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuthFooter should match snapshot 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+      },
+      Object {
+        "justifyContent": "center",
+      },
+    ]
+  }
+  testID="auth-footer-test-id"
+>
+  <Text
+    style={
+      Object {
+        "color": "#9E9E9E",
+        "marginHorizontal": 2,
+      }
+    }
+  >
+    I am a footer.
+  </Text>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+    testID="btn-footer-test-id"
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#9E9E9E",
+            "marginHorizontal": 2,
+          },
+          Object {
+            "textDecorationLine": "underline",
+            "textTransform": "uppercase",
+          },
+        ]
+      }
+    >
+      Click me!
+    </Text>
+  </View>
+</View>
+`;
