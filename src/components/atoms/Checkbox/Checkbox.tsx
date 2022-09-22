@@ -8,7 +8,7 @@ export interface CheckboxHandle {
   clear: () => void;
 }
 
-interface Props {
+export interface Props {
   testID: string;
 }
 

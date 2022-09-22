@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox should match snapshot 1`] = `
+<View
+  accessibilityRole="checkbox"
+  accessibilityState={
+    Object {
+      "checked": false,
+      "disabled": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Array [
+      Object {
+        "borderColor": "#657786",
+        "borderRadius": 2,
+        "borderWidth": 2,
+        "height": 20,
+        "width": 20,
+      },
+      Object {
+        "borderRadius": 4,
+        "borderWidth": 1,
+      },
+      false,
+      Object {
+        "backgroundColor": undefined,
+        "borderColor": "#9E9E9E",
+      },
+      undefined,
+      false,
+    ]
+  }
+  testID="checkbox-test-id"
+/>
+`;
