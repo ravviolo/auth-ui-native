@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { fireEvent, render, screen } from '@testing-library/react-native';
 import testRenderer from 'react-test-renderer';
 
