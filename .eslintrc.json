@@ -70,6 +70,7 @@
       "error",
       {
         "devDependencies": [
+          "setupTests.ts",
           "**/*.test.{js,jsx,ts,tsx}",
           "**/*.stories.*",
           "**/.storybook/**/*.*",

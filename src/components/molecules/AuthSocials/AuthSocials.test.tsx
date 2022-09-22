@@ -5,10 +5,6 @@ import { AuthSocials } from './AuthSocials';
 
 import type { Props } from './AuthSocials';
 
-beforeEach(() => {
-  jest.clearAllMocks();
-});
-
 describe('AuthSocials', () => {
   const mockOnPressFacebook = jest.fn<Props['onPressFacebook'], []>();
   const mockOnPressGoogle = jest.fn<Props['onPressGoogle'], []>();

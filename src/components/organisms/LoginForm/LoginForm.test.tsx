@@ -5,10 +5,6 @@ import { LoginForm } from './LoginForm';
 
 import type { Props } from './LoginForm';
 
-beforeEach(() => {
-  jest.clearAllMocks();
-});
-
 describe('LoginForm', () => {
   const mockOnSubmitLoginForm = jest.fn<Props['onSubmitLoginForm'], [string, string, boolean]>();
   const mockOnPressResetPassword = jest.fn<Props['onPressResetPassword'], []>();
