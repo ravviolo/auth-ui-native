@@ -70,7 +70,7 @@
       "error",
       {
         "devDependencies": [
-          "**/*.test.js",
+          "**/*.test.{js,jsx,ts,tsx}",
           "**/*.stories.*",
           "**/.storybook/**/*.*",
           "**/storybook/**/*.*"
