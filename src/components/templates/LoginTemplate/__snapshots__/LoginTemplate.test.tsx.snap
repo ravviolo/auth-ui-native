@@ -1,0 +1,533 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginTemplate should match snapshot 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "backgroundColor": "#fff",
+        "flexGrow": 1,
+        "paddingHorizontal": 30,
+        "paddingVertical": 50,
+      }
+    }
+    testID="login-template-test-id"
+  >
+    <View>
+      <View
+        testID="auth-header-login-template-test-id"
+      >
+        <Text
+          style={
+            Object {
+              "color": "#3D3D3D",
+              "fontSize": 18,
+              "fontWeight": "bold",
+              "textTransform": "uppercase",
+            }
+          }
+          testID="auth-heading-test-id"
+        >
+          Login Header
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "height": 280,
+            "marginVertical": 60,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "flexDirection": "column",
+              },
+              Object {
+                "flex": 1,
+                "justifyContent": "space-between",
+              },
+            ]
+          }
+          testID="login-form-test-id"
+        >
+          <View
+            testID="email-input-login-form-test-id"
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#3D3D3D",
+                  "marginBottom": 3,
+                }
+              }
+              testID="input-label-email-test-id"
+            >
+              Email
+            </Text>
+            <TextInput
+              onBlur={[Function]}
+              onChangeText={[Function]}
+              onFocus={[Function]}
+              secureTextEntry={false}
+              style={
+                Array [
+                  Object {
+                    "borderColor": "#9E9E9E",
+                    "borderRadius": 8,
+                    "borderWidth": 1,
+                    "height": 40,
+                    "padding": 10,
+                  },
+                  Object {
+                    "borderColor": "#9E9E9E",
+                  },
+                ]
+              }
+              testID="input-field-email-test-id"
+              value=""
+            />
+          </View>
+          <View
+            testID="password-input-login-form-test-id"
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#3D3D3D",
+                  "marginBottom": 3,
+                }
+              }
+              testID="input-label-password-test-id"
+            >
+              Password
+            </Text>
+            <TextInput
+              onBlur={[Function]}
+              onChangeText={[Function]}
+              onFocus={[Function]}
+              secureTextEntry={true}
+              style={
+                Array [
+                  Object {
+                    "borderColor": "#9E9E9E",
+                    "borderRadius": 8,
+                    "borderWidth": 1,
+                    "height": 40,
+                    "padding": 10,
+                  },
+                  Object {
+                    "borderColor": "#9E9E9E",
+                  },
+                ]
+              }
+              testID="input-field-password-test-id"
+              value=""
+            />
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "flexDirection": "row",
+                },
+                Object {
+                  "justifyContent": "space-between",
+                  "width": 130,
+                },
+              ]
+            }
+            testID="checkbox-container-login-form-test-id"
+          >
+            <View
+              accessibilityRole="checkbox"
+              accessibilityState={
+                Object {
+                  "checked": false,
+                  "disabled": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Array [
+                  Object {
+                    "borderColor": "#657786",
+                    "borderRadius": 2,
+                    "borderWidth": 2,
+                    "height": 20,
+                    "width": 20,
+                  },
+                  Object {
+                    "borderRadius": 4,
+                    "borderWidth": 1,
+                  },
+                  false,
+                  Object {
+                    "backgroundColor": undefined,
+                    "borderColor": "#9E9E9E",
+                  },
+                  undefined,
+                  false,
+                ]
+              }
+              testID="remember-password-checkbox-test-id"
+            />
+            <Text
+              style={
+                Object {
+                  "color": "#3D3D3D",
+                  "marginBottom": 3,
+                }
+              }
+              testID="input-label-remember-password-checkbox-test-id"
+            >
+              Remember me?
+            </Text>
+          </View>
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#FF4684",
+                "borderRadius": 10,
+                "elevation": 5,
+                "padding": 15,
+              }
+            }
+            testID="btn-submit-login-test-id"
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#EDEDED",
+                  "letterSpacing": 1,
+                  "textTransform": "uppercase",
+                }
+              }
+            >
+              Login
+            </Text>
+          </View>
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+            testID="btn-reset-password-test-id"
+          >
+            <Text
+              style={
+                Object {
+                  "alignSelf": "flex-end",
+                  "color": "#9E9E9E",
+                }
+              }
+            >
+              Forgot Password?
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          }
+        }
+        testID="divider-login-test-id"
+      >
+        <View
+          style={
+            Object {
+              "alignSelf": "stretch",
+              "backgroundColor": "#9E9E9E",
+              "height": 1,
+            }
+          }
+        />
+        <Text
+          style={
+            Object {
+              "backgroundColor": "#fff",
+              "borderColor": "#9E9E9E",
+              "borderRadius": 5,
+              "borderWidth": 1,
+              "color": "#9E9E9E",
+              "padding": 4,
+              "position": "absolute",
+              "textAlign": "center",
+              "zIndex": 2,
+            }
+          }
+        >
+          OR
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "marginVertical": 60,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "flexDirection": "row",
+              },
+              Object {
+                "alignItems": "center",
+                "justifyContent": "space-around",
+                "paddingHorizontal": 55,
+              },
+            ]
+          }
+          testID="auth-socials-login-template-test-id"
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "borderRadius": 100,
+                  "borderWidth": 2,
+                  "height": 50,
+                  "justifyContent": "center",
+                  "padding": 8,
+                  "width": 50,
+                },
+                Object {
+                  "borderColor": "#DB4437",
+                },
+              ]
+            }
+            testID="icon-btn-Google-test-id"
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "fontSize": 20,
+                    "fontWeight": "bold",
+                  },
+                  Object {
+                    "color": "#DB4437",
+                  },
+                ]
+              }
+            >
+              G
+            </Text>
+          </View>
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "borderRadius": 100,
+                  "borderWidth": 2,
+                  "height": 50,
+                  "justifyContent": "center",
+                  "padding": 8,
+                  "width": 50,
+                },
+                Object {
+                  "borderColor": "#4267B2",
+                },
+              ]
+            }
+            testID="icon-btn-Facebook-test-id"
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "fontSize": 20,
+                    "fontWeight": "bold",
+                  },
+                  Object {
+                    "color": "#4267B2",
+                  },
+                ]
+              }
+            >
+              f
+            </Text>
+          </View>
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "borderRadius": 100,
+                  "borderWidth": 2,
+                  "height": 50,
+                  "justifyContent": "center",
+                  "padding": 8,
+                  "width": 50,
+                },
+                Object {
+                  "borderColor": "#0077B5",
+                },
+              ]
+            }
+            testID="icon-btn-LinkedIn-test-id"
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "fontSize": 20,
+                    "fontWeight": "bold",
+                  },
+                  Object {
+                    "color": "#0077B5",
+                  },
+                ]
+              }
+            >
+              in
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "flexDirection": "row",
+              },
+              Object {
+                "justifyContent": "center",
+              },
+            ]
+          }
+          testID="auth-footer-login-template-test-id"
+        >
+          <Text
+            style={
+              Object {
+                "color": "#9E9E9E",
+                "marginHorizontal": 2,
+              }
+            }
+          >
+            Login Footer
+          </Text>
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+            testID="btn-footer-test-id"
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#9E9E9E",
+                    "marginHorizontal": 2,
+                  },
+                  Object {
+                    "textDecorationLine": "underline",
+                    "textTransform": "uppercase",
+                  },
+                ]
+              }
+            >
+              Click me
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;
