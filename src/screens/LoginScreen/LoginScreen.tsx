@@ -8,8 +8,9 @@ import { loginUser, selectUser } from 'store/user/userSlice';
 type Props = NativeStackScreenProps<RootStackParamList, 'Login'>;
 
 export const LoginScreen = ({ navigation }: Props) => {
-  const dispatch = useAppDispatch();
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const user = useAppSelector(selectUser);
+  const dispatch = useAppDispatch();
 
   const handleNavigate = () => {
     navigation.navigate('SignUp');
