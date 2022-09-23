@@ -2,27 +2,31 @@
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { LoginTemplate } from 'components/templates';
 import { RootStackParamList } from 'navigator';
+import { useAppDispatch, useAppSelector } from 'store/hooks';
+import { loginUser, selectUser } from 'store/user/userSlice';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Login'>;
 
 export const LoginScreen = ({ navigation }: Props) => {
+  const dispatch = useAppDispatch();
+  const user = useAppSelector(selectUser);
+
   const handleNavigate = () => {
     navigation.navigate('SignUp');
   };
 
-  const handleLoginFormSubmit = (
+  const handleLoginFormSubmit = async (
     email: string,
     password: string,
     rememberPassword: boolean
-  ): void => {
+  ): Promise<void> => {
     const userCredentials = {
       email,
       password,
       rememberPassword,
     };
 
-    console.log('Logging user...');
-    console.log(userCredentials);
+    await dispatch(loginUser(userCredentials));
   };
 
   const handleLoginViaGoogle = (): void => {

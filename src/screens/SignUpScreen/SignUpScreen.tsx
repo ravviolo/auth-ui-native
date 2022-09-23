@@ -2,22 +2,26 @@
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { SignUpTemplate } from 'components/templates';
 import { RootStackParamList } from 'navigator';
+import { useAppDispatch, useAppSelector } from 'store/hooks';
+import { registerUser, selectUser } from 'store/user/userSlice';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'SignUp'>;
 
 export const SignUpScreen = ({ navigation }: Props) => {
+  const dispatch = useAppDispatch();
+  const user = useAppSelector(selectUser);
+
   const handleNavigate = () => {
     navigation.navigate('Login');
   };
 
-  const handleSignUpFormSubmit = (email: string, password: string): void => {
+  const handleSignUpFormSubmit = async (email: string, password: string): Promise<void> => {
     const userCredentials = {
       email,
       password,
     };
 
-    console.log('Registering user...');
-    console.log(userCredentials);
+    await dispatch(registerUser(userCredentials));
   };
 
   const handleSignUpViaGoogle = (): void => {
