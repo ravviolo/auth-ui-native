@@ -1,4 +1,5 @@
 import { StyleSheet, Text, TouchableHighlight } from 'react-native';
+import { colors } from 'theme';
 
 export interface Props {
   icon: string;
@@ -12,6 +13,7 @@ export const IconButton = ({ onPress, color, icon, testID }: Props) => {
     <TouchableHighlight
       style={[styles.btn, { borderColor: color }]}
       testID={testID}
+      underlayColor={colors.textWhite}
       onPress={onPress}
     >
       <Text style={[styles.icon, { color }]}>{icon}</Text>
