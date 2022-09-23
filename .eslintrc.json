@@ -70,6 +70,7 @@
       "error",
       {
         "devDependencies": [
+          "src/utils/testUtils.tsx",
           "setupTests.ts",
           "**/*.test.{js,jsx,ts,tsx}",
           "**/*.stories.*",
