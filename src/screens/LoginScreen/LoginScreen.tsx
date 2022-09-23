@@ -6,8 +6,6 @@ import { RootStackParamList } from 'navigator';
 import { useAppDispatch, useAppSelector } from 'store/hooks';
 import { loginUser, selectUser } from 'store/user/userSlice';
 
-// export type Props = NativeStackScreenProps<RootStackParamList, 'Login'>;
-
 export const LoginScreen = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const user = useAppSelector(selectUser);

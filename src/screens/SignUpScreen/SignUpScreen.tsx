@@ -1,16 +1,16 @@
 /* eslint-disable no-console */
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { useNavigation } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { SignUpTemplate } from 'components/templates';
 import { RootStackParamList } from 'navigator';
 import { useAppDispatch, useAppSelector } from 'store/hooks';
 import { registerUser, selectUser } from 'store/user/userSlice';
 
-type Props = NativeStackScreenProps<RootStackParamList, 'SignUp'>;
-
-export const SignUpScreen = ({ navigation }: Props) => {
+export const SignUpScreen = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const user = useAppSelector(selectUser);
   const dispatch = useAppDispatch();
+  const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
 
   const handleNavigate = () => {
     navigation.navigate('Login');
