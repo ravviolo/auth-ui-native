@@ -10,7 +10,7 @@ export const Divider = ({ label, testID }: Props) => {
   return (
     <View style={styles.container} testID={testID}>
       <View style={styles.line} />
-      <Text style={styles.label}>{label}</Text>
+      {label && <Text style={styles.label}>{label}</Text>}
     </View>
   );
 };
@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
     padding: 4,
     position: 'absolute',
     textAlign: 'center',
+    textTransform: 'uppercase',
     zIndex: 2,
   },
   line: {
