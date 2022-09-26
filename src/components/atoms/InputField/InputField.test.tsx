@@ -30,7 +30,7 @@ describe('InputField', () => {
     expect(inputField.props.value).toBe('test input');
   });
 
-  it.only('should change border color on input focus', async () => {
+  it('should change border color on input focus', async () => {
     render(<InputField {...props} />);
 
     const inputField = screen.getByTestId('input-field-test-id');
