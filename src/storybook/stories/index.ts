@@ -9,3 +9,4 @@ import 'components/atoms/InputLabel/InputLabel.stories';
 import 'components/atoms/TextButton/TextButton.stories';
 
 import 'components/molecules/AuthFooter/AuthFooter.stories';
+import 'components/molecules/AuthHeader/AuthHeader.stories';
