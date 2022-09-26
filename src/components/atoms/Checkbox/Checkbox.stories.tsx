@@ -5,7 +5,5 @@ import { StoryScreen } from 'storybook/StoryScreen';
 import { Checkbox } from './Checkbox';
 
 storiesOf('Checkbox', module)
-  .addDecorator((getStory) => (
-    <StoryScreen style={{ alignItems: 'center' }}>{getStory()}</StoryScreen>
-  ))
+  .addDecorator((getStory) => <StoryScreen center>{getStory()}</StoryScreen>)
   .add('Default', () => <Checkbox testID={text('testID', 'test-id')} />);

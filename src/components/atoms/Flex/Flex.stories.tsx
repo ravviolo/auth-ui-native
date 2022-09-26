@@ -24,9 +24,7 @@ const FlexChildren = Array(10)
 const flexOptions: ['column', 'row'] = ['column', 'row'];
 
 storiesOf('Flex', module)
-  .addDecorator((getStory) => (
-    <StoryScreen style={{ alignItems: 'center' }}>{getStory()}</StoryScreen>
-  ))
+  .addDecorator((getStory) => <StoryScreen center>{getStory()}</StoryScreen>)
   .add('Column', () => (
     <Flex
       direction={select('direction', flexOptions, 'column')}

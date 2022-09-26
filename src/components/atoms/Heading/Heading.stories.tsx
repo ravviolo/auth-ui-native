@@ -5,9 +5,7 @@ import { StoryScreen } from 'storybook/StoryScreen';
 import { Heading } from './Heading';
 
 storiesOf('Heading', module)
-  .addDecorator((getStory) => (
-    <StoryScreen style={{ alignItems: 'center' }}>{getStory()}</StoryScreen>
-  ))
+  .addDecorator((getStory) => <StoryScreen center>{getStory()}</StoryScreen>)
   .add('Default', () => (
     <Heading
       testID={text('testID', 'heading-test-id')}

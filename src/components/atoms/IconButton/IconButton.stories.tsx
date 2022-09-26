@@ -6,9 +6,7 @@ import { StoryScreen } from 'storybook/StoryScreen';
 import { IconButton } from './IconButton';
 
 storiesOf('IconButton', module)
-  .addDecorator((getStory) => (
-    <StoryScreen style={{ alignItems: 'center' }}>{getStory()}</StoryScreen>
-  ))
+  .addDecorator((getStory) => <StoryScreen center>{getStory()}</StoryScreen>)
   .add('Default', () => (
     <IconButton
       color={color('color', '#4267B2')}
