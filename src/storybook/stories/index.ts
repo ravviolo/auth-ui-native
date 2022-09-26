@@ -18,3 +18,4 @@ import 'components/organisms/LoginForm/LoginForm.stories';
 import 'components/organisms/SignUpForm/SignUpForm.stories';
 
 import 'components/templates/LoginTemplate/LoginTemplate.stories';
+import 'components/templates/SignUpTemplate/SignUpTemplate.stories';
