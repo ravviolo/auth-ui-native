@@ -6,3 +6,4 @@ import 'components/atoms/Heading/Heading.stories';
 import 'components/atoms/IconButton/IconButton.stories';
 import 'components/atoms/InputField/InputField.stories';
 import 'components/atoms/InputLabel/InputLabel.stories';
+import 'components/atoms/TextButton/TextButton.stories';
