@@ -7,6 +7,6 @@ import { Divider } from './Divider';
 storiesOf('Divider', module)
   .addDecorator((getStory) => <StoryScreen>{getStory()}</StoryScreen>)
   .add('With Label', () => (
-    <Divider label={text('label', 'Label')} testID={text('testID', 'test-id')} />
+    <Divider label={text('label', 'Label')} testID={text('testID', 'divider-test-id')} />
   ))
-  .add('No Label', () => <Divider testID={text('testID', 'test-id')} />);
+  .add('No Label', () => <Divider testID={text('testID', 'divider-test-id')} />);

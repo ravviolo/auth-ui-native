@@ -7,5 +7,5 @@ import { InputLabel } from './InputLabel';
 storiesOf('InputLabel', module)
   .addDecorator((getStory) => <StoryScreen center>{getStory()}</StoryScreen>)
   .add('Default', () => (
-    <InputLabel label={text('label', 'Label')} testID={text('testID', 'input-field-test-id')} />
+    <InputLabel label={text('label', 'Label')} testID={text('testID', 'input-label-test-id')} />
   ));

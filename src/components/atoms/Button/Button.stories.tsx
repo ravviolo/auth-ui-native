@@ -9,7 +9,7 @@ storiesOf('Button', module)
   .addDecorator((getStory) => <StoryScreen>{getStory()}</StoryScreen>)
   .add('Default', () => (
     <Button
-      testID={text('testID', 'test-id')}
+      testID={text('testID', 'btn-test-id')}
       title={text('title', 'Button')}
       onPress={action('onPress')}
     />
