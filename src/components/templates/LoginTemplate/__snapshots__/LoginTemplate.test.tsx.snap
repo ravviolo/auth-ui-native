@@ -297,6 +297,7 @@ exports[`LoginTemplate should match snapshot 1`] = `
               "padding": 4,
               "position": "absolute",
               "textAlign": "center",
+              "textTransform": "uppercase",
               "zIndex": 2,
             }
           }
