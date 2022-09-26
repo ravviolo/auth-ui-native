@@ -22,6 +22,6 @@ const styles = StyleSheet.create({
     backgroundColor: colors.background,
     flex: 1,
     justifyContent: 'center',
-    paddingHorizontal: 50,
+    paddingHorizontal: 24,
   },
 });
