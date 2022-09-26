@@ -10,3 +10,4 @@ import 'components/atoms/TextButton/TextButton.stories';
 
 import 'components/molecules/AuthFooter/AuthFooter.stories';
 import 'components/molecules/AuthHeader/AuthHeader.stories';
+import 'components/molecules/AuthSocials/AuthSocials.stories';
