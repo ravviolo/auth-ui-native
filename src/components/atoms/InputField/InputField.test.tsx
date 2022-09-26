@@ -1,5 +1,6 @@
-import { fireEvent, render, screen } from '@testing-library/react-native';
+import { act, fireEvent, render, screen } from '@testing-library/react-native';
 import testRenderer from 'react-test-renderer';
+import { colors } from 'theme';
 
 import { InputField } from './InputField';
 
@@ -27,6 +28,21 @@ describe('InputField', () => {
     fireEvent.changeText(inputField, 'test input');
 
     expect(inputField.props.value).toBe('test input');
+  });
+
+  it.only('should change border color on input focus', async () => {
+    render(<InputField {...props} />);
+
+    const inputField = screen.getByTestId('input-field-test-id');
+
+    expect(inputField).toHaveStyle({ borderColor: colors.textLight });
+
+    await act(() => {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-call
+      inputField.props.onFocus();
+    });
+
+    expect(inputField).toHaveStyle({ borderColor: colors.text });
   });
 
   it('should match snapshot', () => {
