@@ -11,3 +11,5 @@ import 'components/atoms/TextButton/TextButton.stories';
 import 'components/molecules/AuthFooter/AuthFooter.stories';
 import 'components/molecules/AuthHeader/AuthHeader.stories';
 import 'components/molecules/AuthSocials/AuthSocials.stories';
+import 'components/molecules/EmailInput/EmailInput.stories';
+import 'components/molecules/PasswordInput/PasswordInput.stories';
