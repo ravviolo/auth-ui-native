@@ -15,3 +15,4 @@ import 'components/molecules/EmailInput/EmailInput.stories';
 import 'components/molecules/PasswordInput/PasswordInput.stories';
 
 import 'components/organisms/LoginForm/LoginForm.stories';
+import 'components/organisms/SignUpForm/SignUpForm.stories';
