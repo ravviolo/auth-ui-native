@@ -7,3 +7,5 @@ import 'components/atoms/IconButton/IconButton.stories';
 import 'components/atoms/InputField/InputField.stories';
 import 'components/atoms/InputLabel/InputLabel.stories';
 import 'components/atoms/TextButton/TextButton.stories';
+
+import 'components/molecules/AuthFooter/AuthFooter.stories';
