@@ -13,3 +13,5 @@ import 'components/molecules/AuthHeader/AuthHeader.stories';
 import 'components/molecules/AuthSocials/AuthSocials.stories';
 import 'components/molecules/EmailInput/EmailInput.stories';
 import 'components/molecules/PasswordInput/PasswordInput.stories';
+
+import 'components/organisms/LoginForm/LoginForm.stories';
