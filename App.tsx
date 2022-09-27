@@ -4,7 +4,7 @@ import { store } from 'store';
 
 import StorybookUI from './storybook';
 
-const LOAD_STORYBOOK = true;
+const LOAD_STORYBOOK = false;
 
 const App = () => {
   return (
