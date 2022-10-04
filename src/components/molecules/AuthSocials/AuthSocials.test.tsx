@@ -1,4 +1,4 @@
-import { fireEvent, render, screen, within } from '@testing-library/react-native';
+import { fireEvent, render, screen } from '@testing-library/react-native';
 import testRenderer from 'react-test-renderer';
 
 import { AuthSocials } from './AuthSocials';
@@ -11,7 +11,6 @@ describe('AuthSocials', () => {
   const mockOnPressLinkedIn = jest.fn<Props['onPressLinkedIn'], []>();
 
   const props: Props = {
-    testID: 'auth-socials-test-id',
     onPressFacebook: mockOnPressFacebook,
     onPressGoogle: mockOnPressGoogle,
     onPressLinkedIn: mockOnPressLinkedIn,
@@ -20,16 +19,15 @@ describe('AuthSocials', () => {
   it('should render 3 icon buttons', () => {
     render(<AuthSocials {...props} />);
 
-    const authSocials = screen.getByTestId('auth-socials-test-id');
+    const authSocialsIcons = screen.getAllByTestId(/icon-btn-(facebook|google|linkedin)-test-id/i);
 
-    expect(authSocials.children).toHaveLength(3);
+    expect(authSocialsIcons).toHaveLength(3);
   });
 
   it('should handle click events on Facebook icon - run handler once, not trigger other handlers', () => {
     render(<AuthSocials {...props} />);
 
-    const authSocials = screen.getByTestId('auth-socials-test-id');
-    const facebookIconBtn = within(authSocials).getByTestId(/icon-btn-facebook-test-id/i);
+    const facebookIconBtn = screen.getByTestId(/icon-btn-facebook-test-id/i);
 
     fireEvent.press(facebookIconBtn);
 
@@ -41,8 +39,7 @@ describe('AuthSocials', () => {
   it('should handle click events on Google icon - run handler once, not trigger other handlers', () => {
     render(<AuthSocials {...props} />);
 
-    const authSocials = screen.getByTestId('auth-socials-test-id');
-    const googleIconBtn = within(authSocials).getByTestId(/icon-btn-google-test-id/i);
+    const googleIconBtn = screen.getByTestId(/icon-btn-google-test-id/i);
 
     fireEvent.press(googleIconBtn);
 
@@ -54,8 +51,7 @@ describe('AuthSocials', () => {
   it('should handle click events on LinkedIn icon - run handler once, not trigger other handlers', () => {
     render(<AuthSocials {...props} />);
 
-    const authSocials = screen.getByTestId('auth-socials-test-id');
-    const linkedInIconBtn = within(authSocials).getByTestId(/icon-btn-linkedin-test-id/i);
+    const linkedInIconBtn = screen.getByTestId(/icon-btn-linkedin-test-id/i);
 
     fireEvent.press(linkedInIconBtn);
 

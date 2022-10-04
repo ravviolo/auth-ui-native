@@ -6,10 +6,9 @@ import { styles } from './SignUpForm.styles';
 
 export interface Props {
   onSubmitSignUpForm: (email: string, password: string) => void;
-  testID: string;
 }
 
-export const SignUpForm = ({ onSubmitSignUpForm, testID }: Props) => {
+export const SignUpForm = ({ onSubmitSignUpForm }: Props) => {
   const emailRef = useRef<TextInputHandle | null>(null);
   const passwordRef = useRef<TextInputHandle | null>(null);
 
@@ -30,7 +29,7 @@ export const SignUpForm = ({ onSubmitSignUpForm, testID }: Props) => {
     }
   };
   return (
-    <Flex direction="column" style={styles.container} testID={testID}>
+    <Flex direction="column" style={styles.container}>
       <EmailInput ref={emailRef} testID="email-input-signup-form-test-id" />
       <PasswordInput ref={passwordRef} testID="password-input-signup-form-test-id" />
       <Button testID="btn-submit-signup-test-id" title="Sign Up" onPress={onSubmit} />

@@ -16,7 +16,6 @@ export interface Props {
   headerText: string;
   footerText: string;
   footerBtnText: string;
-  testID: string;
 }
 
 export const LoginTemplate = ({
@@ -29,17 +28,15 @@ export const LoginTemplate = ({
   footerBtnText,
   footerText,
   headerText,
-  testID,
 }: Props) => {
   return (
     <>
       <StatusBar backgroundColor={colors.background} barStyle="dark-content" />
       <KeyboardAvoidingView style={styles.keyboardView}>
-        <ScrollView contentContainerStyle={styles.container} testID={testID}>
+        <ScrollView contentContainerStyle={styles.container}>
           <AuthHeader testID="auth-header-login-template-test-id" title={headerText} />
           <View style={styles.formContainer}>
             <LoginForm
-              testID="login-form-test-id"
               onPressResetPassword={onPressResetPassword}
               onSubmitLoginForm={onSubmitLoginForm}
             />
@@ -47,7 +44,6 @@ export const LoginTemplate = ({
           <Divider label="OR" testID="divider-login-test-id" />
           <View style={styles.socialsContainer}>
             <AuthSocials
-              testID="auth-socials-login-template-test-id"
               onPressFacebook={onPressFacebook}
               onPressGoogle={onPressGoogle}
               onPressLinkedIn={onPressLinkedIn}

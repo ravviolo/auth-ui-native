@@ -13,12 +13,11 @@ import { useEffect, useRef } from 'react';
 import { styles } from './LoginForm.styles';
 
 export interface Props {
-  testID: string;
   onSubmitLoginForm: (email: string, password: string, rememberPassword: boolean) => void;
   onPressResetPassword: () => void;
 }
 
-export const LoginForm = ({ onSubmitLoginForm, onPressResetPassword, testID }: Props) => {
+export const LoginForm = ({ onSubmitLoginForm, onPressResetPassword }: Props) => {
   const emailRef = useRef<TextInputHandle | null>(null);
   const passwordRef = useRef<TextInputHandle | null>(null);
   const rememberPasswordRef = useRef<CheckboxHandle | null>(null);
@@ -41,7 +40,7 @@ export const LoginForm = ({ onSubmitLoginForm, onPressResetPassword, testID }: P
     }
   };
   return (
-    <Flex direction="column" style={styles.container} testID={testID}>
+    <Flex direction="column" style={styles.container}>
       <EmailInput ref={emailRef} testID="email-input-login-form-test-id" />
       <PasswordInput ref={passwordRef} testID="password-input-login-form-test-id" />
       <Flex

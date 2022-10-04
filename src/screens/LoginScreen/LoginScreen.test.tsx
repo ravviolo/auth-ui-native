@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { act, fireEvent, screen, within } from '@testing-library/react-native';
+import { act, fireEvent, screen } from '@testing-library/react-native';
 import { RootState } from 'store';
 import { createWithProviders, renderWithProviders } from 'utils/testUtils';
 
@@ -22,10 +22,9 @@ describe('LoginScreen', () => {
   it("after log in should save user's data, change user's status to 'complete'", async () => {
     const { store } = renderWithProviders(<LoginScreen />);
 
-    const template = screen.getByTestId('login-template-test-id');
-    const emailInputField = within(template).getByTestId('input-field-email-test-id');
-    const passwordInputField = within(template).getByTestId('input-field-password-test-id');
-    const loginBtn = within(template).getByTestId('btn-submit-login-test-id');
+    const emailInputField = screen.getByTestId('input-field-email-test-id');
+    const passwordInputField = screen.getByTestId('input-field-password-test-id');
+    const loginBtn = screen.getByTestId('btn-submit-login-test-id');
 
     fireEvent.changeText(emailInputField, testEmail);
     fireEvent.changeText(passwordInputField, testPassword);
@@ -60,10 +59,9 @@ describe('LoginScreen', () => {
 
     const { store } = renderWithProviders(<LoginScreen />, { preloadedState });
 
-    const template = screen.getByTestId('login-template-test-id');
-    const emailInputField = within(template).getByTestId('input-field-email-test-id');
-    const passwordInputField = within(template).getByTestId('input-field-password-test-id');
-    const loginBtn = within(template).getByTestId('btn-submit-login-test-id');
+    const emailInputField = screen.getByTestId('input-field-email-test-id');
+    const passwordInputField = screen.getByTestId('input-field-password-test-id');
+    const loginBtn = screen.getByTestId('btn-submit-login-test-id');
 
     fireEvent.changeText(emailInputField, testEmail);
     fireEvent.changeText(passwordInputField, testPassword);
@@ -82,9 +80,7 @@ describe('LoginScreen', () => {
     renderWithProviders(<LoginScreen />);
     console.log = jest.fn();
 
-    const googleIconBtn = within(
-      screen.getByTestId('auth-socials-login-template-test-id')
-    ).getByTestId(/icon-btn-google-test-id/i);
+    const googleIconBtn = screen.getByTestId(/icon-btn-google-test-id/i);
 
     fireEvent.press(googleIconBtn);
 
@@ -95,9 +91,7 @@ describe('LoginScreen', () => {
     renderWithProviders(<LoginScreen />);
     console.log = jest.fn();
 
-    const facebookIconBtn = within(
-      screen.getByTestId('auth-socials-login-template-test-id')
-    ).getByTestId(/icon-btn-facebook-test-id/i);
+    const facebookIconBtn = screen.getByTestId(/icon-btn-facebook-test-id/i);
 
     fireEvent.press(facebookIconBtn);
 
@@ -108,9 +102,7 @@ describe('LoginScreen', () => {
     renderWithProviders(<LoginScreen />);
     console.log = jest.fn();
 
-    const linkedInIconBtn = within(
-      screen.getByTestId('auth-socials-login-template-test-id')
-    ).getByTestId(/icon-btn-linkedin-test-id/i);
+    const linkedInIconBtn = screen.getByTestId(/icon-btn-linkedin-test-id/i);
 
     fireEvent.press(linkedInIconBtn);
 
@@ -121,9 +113,7 @@ describe('LoginScreen', () => {
     renderWithProviders(<LoginScreen />);
     console.log = jest.fn();
 
-    const resetPasswordBtn = within(screen.getByTestId('login-form-test-id')).getByTestId(
-      'btn-reset-password-test-id'
-    );
+    const resetPasswordBtn = screen.getByTestId('btn-reset-password-test-id');
 
     fireEvent.press(resetPasswordBtn);
 
@@ -133,9 +123,7 @@ describe('LoginScreen', () => {
   it('should handle page navigation', () => {
     renderWithProviders(<LoginScreen />);
 
-    const navigateBtn = within(
-      screen.getByTestId('auth-footer-login-template-test-id')
-    ).getByTestId('btn-footer-test-id');
+    const navigateBtn = screen.getByTestId('btn-footer-test-id');
 
     fireEvent.press(navigateBtn);
 

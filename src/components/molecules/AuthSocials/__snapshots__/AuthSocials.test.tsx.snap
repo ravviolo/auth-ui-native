@@ -14,12 +14,15 @@ exports[`AuthSocials should match snapshot 1`] = `
       },
     ]
   }
-  testID="auth-socials-test-id"
 >
   <View
     accessible={true}
+    collapsable={false}
     focusable={true}
+    hitSlop={20}
+    onBlur={[Function]}
     onClick={[Function]}
+    onFocus={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
@@ -28,6 +31,7 @@ exports[`AuthSocials should match snapshot 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Array [
+        false,
         Object {
           "alignItems": "center",
           "borderRadius": 100,
@@ -62,8 +66,12 @@ exports[`AuthSocials should match snapshot 1`] = `
   </View>
   <View
     accessible={true}
+    collapsable={false}
     focusable={true}
+    hitSlop={20}
+    onBlur={[Function]}
     onClick={[Function]}
+    onFocus={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
@@ -72,6 +80,7 @@ exports[`AuthSocials should match snapshot 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Array [
+        false,
         Object {
           "alignItems": "center",
           "borderRadius": 100,
@@ -106,8 +115,12 @@ exports[`AuthSocials should match snapshot 1`] = `
   </View>
   <View
     accessible={true}
+    collapsable={false}
     focusable={true}
+    hitSlop={20}
+    onBlur={[Function]}
     onClick={[Function]}
+    onFocus={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
@@ -116,6 +129,7 @@ exports[`AuthSocials should match snapshot 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Array [
+        false,
         Object {
           "alignItems": "center",
           "borderRadius": 100,

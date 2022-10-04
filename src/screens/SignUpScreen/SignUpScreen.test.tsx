@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { act, fireEvent, screen, within } from '@testing-library/react-native';
+import { act, fireEvent, screen } from '@testing-library/react-native';
 import { RootState } from 'store';
 import { createWithProviders, renderWithProviders } from 'utils/testUtils';
 
@@ -23,10 +23,9 @@ describe('SignUpScreen', () => {
   it("after sign up should save user's data, change user's status to 'complete'", async () => {
     const { store } = renderWithProviders(<SignUpScreen />);
 
-    const template = screen.getByTestId('signup-template-test-id');
-    const emailInputField = within(template).getByTestId('input-field-email-test-id');
-    const passwordInputField = within(template).getByTestId('input-field-password-test-id');
-    const signUpBtn = within(template).getByTestId('btn-submit-signup-test-id');
+    const emailInputField = screen.getByTestId('input-field-email-test-id');
+    const passwordInputField = screen.getByTestId('input-field-password-test-id');
+    const signUpBtn = screen.getByTestId('btn-submit-signup-test-id');
 
     fireEvent.changeText(emailInputField, testEmail);
     fireEvent.changeText(passwordInputField, testPassword);
@@ -61,10 +60,9 @@ describe('SignUpScreen', () => {
 
     const { store } = renderWithProviders(<SignUpScreen />, { preloadedState });
 
-    const template = screen.getByTestId('signup-template-test-id');
-    const emailInputField = within(template).getByTestId('input-field-email-test-id');
-    const passwordInputField = within(template).getByTestId('input-field-password-test-id');
-    const signUpBtn = within(template).getByTestId('btn-submit-signup-test-id');
+    const emailInputField = screen.getByTestId('input-field-email-test-id');
+    const passwordInputField = screen.getByTestId('input-field-password-test-id');
+    const signUpBtn = screen.getByTestId('btn-submit-signup-test-id');
 
     fireEvent.changeText(emailInputField, testEmail);
     fireEvent.changeText(passwordInputField, 'password');
@@ -83,9 +81,7 @@ describe('SignUpScreen', () => {
     renderWithProviders(<SignUpScreen />);
     console.log = jest.fn();
 
-    const googleIconBtn = within(
-      screen.getByTestId('auth-socials-signup-template-test-id')
-    ).getByTestId(/icon-btn-google-test-id/i);
+    const googleIconBtn = screen.getByTestId(/icon-btn-google-test-id/i);
 
     fireEvent.press(googleIconBtn);
 
@@ -96,9 +92,7 @@ describe('SignUpScreen', () => {
     renderWithProviders(<SignUpScreen />);
     console.log = jest.fn();
 
-    const facebookIconBtn = within(
-      screen.getByTestId('auth-socials-signup-template-test-id')
-    ).getByTestId(/icon-btn-facebook-test-id/i);
+    const facebookIconBtn = screen.getByTestId(/icon-btn-facebook-test-id/i);
 
     fireEvent.press(facebookIconBtn);
 
@@ -109,9 +103,7 @@ describe('SignUpScreen', () => {
     renderWithProviders(<SignUpScreen />);
     console.log = jest.fn();
 
-    const linkedInIconBtn = within(
-      screen.getByTestId('auth-socials-signup-template-test-id')
-    ).getByTestId(/icon-btn-linkedin-test-id/i);
+    const linkedInIconBtn = screen.getByTestId(/icon-btn-linkedin-test-id/i);
 
     fireEvent.press(linkedInIconBtn);
 
@@ -121,9 +113,7 @@ describe('SignUpScreen', () => {
   it('should handle page navigation', () => {
     renderWithProviders(<SignUpScreen />);
 
-    const navigateBtn = within(
-      screen.getByTestId('auth-footer-signup-template-test-id')
-    ).getByTestId('btn-footer-test-id');
+    const navigateBtn = screen.getByTestId('btn-footer-test-id');
 
     fireEvent.press(navigateBtn);
 

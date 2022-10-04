@@ -51,7 +51,6 @@ export const LoginScreen = () => {
       footerBtnText="Sign Up"
       footerText="Need an account?"
       headerText="Login"
-      testID="login-template-test-id"
       onPressFacebook={handleLoginViaFacebook}
       onPressFooterBtn={handleNavigate}
       onPressGoogle={handleLoginViaGoogle}

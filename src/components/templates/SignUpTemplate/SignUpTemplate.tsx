@@ -15,7 +15,6 @@ export interface Props {
   headerText: string;
   footerText: string;
   footerBtnText: string;
-  testID: string;
 }
 
 export const SignUpTemplate = ({
@@ -27,21 +26,19 @@ export const SignUpTemplate = ({
   footerBtnText,
   footerText,
   headerText,
-  testID,
 }: Props) => {
   return (
     <>
       <StatusBar backgroundColor={colors.background} barStyle="dark-content" />
       <KeyboardAvoidingView style={styles.keyboardView}>
-        <ScrollView contentContainerStyle={styles.container} testID={testID}>
+        <ScrollView contentContainerStyle={styles.container}>
           <AuthHeader testID="auth-header-signup-template-test-id" title={headerText} />
           <View style={styles.formContainer}>
-            <SignUpForm testID="signup-form-test-id" onSubmitSignUpForm={onSubmitSignUpForm} />
+            <SignUpForm onSubmitSignUpForm={onSubmitSignUpForm} />
           </View>
           <Divider label="OR" testID="divider-signup-test-id" />
           <View style={styles.socialsContainer}>
             <AuthSocials
-              testID="auth-socials-signup-template-test-id"
               onPressFacebook={onPressFacebook}
               onPressGoogle={onPressGoogle}
               onPressLinkedIn={onPressLinkedIn}

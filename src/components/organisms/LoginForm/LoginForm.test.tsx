@@ -12,7 +12,6 @@ describe('LoginForm', () => {
   const testPassword = 'testpassword';
 
   const props: Props = {
-    testID: 'login-form-test-id',
     onPressResetPassword: mockOnPressResetPassword,
     onSubmitLoginForm: mockOnSubmitLoginForm,
   };
@@ -20,9 +19,8 @@ describe('LoginForm', () => {
   it('should render email and password inputs', () => {
     render(<LoginForm {...props} />);
 
-    const loginForm = screen.getByTestId('login-form-test-id');
-    const emailInput = within(loginForm).getByTestId('email-input-login-form-test-id');
-    const passwordInput = within(loginForm).getByTestId('password-input-login-form-test-id');
+    const emailInput = screen.getByTestId('email-input-login-form-test-id');
+    const passwordInput = screen.getByTestId('password-input-login-form-test-id');
 
     expect(emailInput).not.toBeNull();
     expect(passwordInput).not.toBeNull();
@@ -31,8 +29,7 @@ describe('LoginForm', () => {
   it("should render checkbox with 'Remember me?' label", () => {
     render(<LoginForm {...props} />);
 
-    const loginForm = screen.getByTestId('login-form-test-id');
-    const checkbox = within(loginForm).getByTestId('remember-password-checkbox-test-id');
+    const checkbox = screen.getByTestId('remember-password-checkbox-test-id');
     const checkboxLabel = screen.getByTestId('input-label-remember-password-checkbox-test-id');
 
     expect(checkboxLabel).toHaveTextContent(/Remember me?/);
@@ -42,8 +39,7 @@ describe('LoginForm', () => {
   it('should render initially unchecked checkbox', () => {
     render(<LoginForm {...props} />);
 
-    const loginForm = screen.getByTestId('login-form-test-id');
-    const checkbox = within(loginForm).getByTestId('remember-password-checkbox-test-id');
+    const checkbox = screen.getByTestId('remember-password-checkbox-test-id');
 
     expect(checkbox.props.accessibilityState).toHaveProperty('checked', false);
   });
@@ -51,8 +47,7 @@ describe('LoginForm', () => {
   it("should render submit button with 'Login' text", () => {
     render(<LoginForm {...props} />);
 
-    const loginForm = screen.getByTestId('login-form-test-id');
-    const submitButton = within(loginForm).getByTestId('btn-submit-login-test-id');
+    const submitButton = screen.getByTestId('btn-submit-login-test-id');
 
     expect(submitButton).toHaveTextContent('Login');
   });

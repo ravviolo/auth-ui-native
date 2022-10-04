@@ -3,8 +3,12 @@
 exports[`IconButton should match snapshot 1`] = `
 <View
   accessible={true}
+  collapsable={false}
   focusable={true}
+  hitSlop={20}
+  onBlur={[Function]}
   onClick={[Function]}
+  onFocus={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -13,6 +17,7 @@ exports[`IconButton should match snapshot 1`] = `
   onStartShouldSetResponder={[Function]}
   style={
     Array [
+      false,
       Object {
         "alignItems": "center",
         "borderRadius": 100,

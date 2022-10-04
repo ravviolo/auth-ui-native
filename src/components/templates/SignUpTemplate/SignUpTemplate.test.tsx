@@ -1,4 +1,4 @@
-import { render, screen, fireEvent, within } from '@testing-library/react-native';
+import { fireEvent, render, screen, within } from '@testing-library/react-native';
 import testRenderer from 'react-test-renderer';
 
 import { SignUpTemplate } from './SignUpTemplate';
@@ -16,7 +16,6 @@ describe('SignUpTemplate', () => {
   const testPassword = 'testpassword';
 
   const props: Props = {
-    testID: 'signup-template-test-id',
     headerText: 'SignUp Header',
     footerText: 'SignUp Footer',
     footerBtnText: 'Click me',
@@ -30,18 +29,9 @@ describe('SignUpTemplate', () => {
   it('should render signup header with title', () => {
     render(<SignUpTemplate {...props} />);
 
-    const signUpTemplate = screen.getByTestId('signup-template-test-id');
-    const heading = within(signUpTemplate).getByTestId('auth-header-signup-template-test-id');
+    const heading = screen.getByTestId('auth-header-signup-template-test-id');
 
     expect(heading).toHaveTextContent('SignUp Header');
-  });
-
-  it('should render signup form', () => {
-    render(<SignUpTemplate {...props} />);
-
-    const signUpForm = screen.getByTestId('signup-form-test-id');
-
-    expect(signUpForm).not.toBeNull();
   });
 
   it('should submit form with non-empty input fields - run submit handler once', () => {
@@ -93,15 +83,13 @@ describe('SignUpTemplate', () => {
   it('should render authenticate through socials section, should display 3 icons for Facebook, Google, LinkedIn', () => {
     render(<SignUpTemplate {...props} />);
 
-    const authSocials = screen.getByTestId('auth-socials-signup-template-test-id');
-
-    const authSocialsIcons = within(authSocials).getAllByTestId(/icon-btn-([A-Z])\w+-test-id/i);
+    const authSocialsIcons = screen.getAllByTestId(/icon-btn-(facebook|google|linkedin)-test-id/i);
 
     expect(authSocialsIcons).toHaveLength(3);
 
-    const facebookIcon = within(authSocials).getByTestId(/icon-btn-facebook-test-id/i);
-    const googleIcon = within(authSocials).getByTestId(/icon-btn-google-test-id/i);
-    const linkedInIcon = within(authSocials).getByTestId(/icon-btn-linkedin-test-id/i);
+    const facebookIcon = screen.getByTestId(/icon-btn-facebook-test-id/i);
+    const googleIcon = screen.getByTestId(/icon-btn-google-test-id/i);
+    const linkedInIcon = screen.getByTestId(/icon-btn-linkedin-test-id/i);
 
     expect(facebookIcon).not.toBeNull();
     expect(googleIcon).not.toBeNull();
@@ -111,8 +99,7 @@ describe('SignUpTemplate', () => {
   it('should handle click events on Facebook icon - run handler once, not trigger other handlers', () => {
     render(<SignUpTemplate {...props} />);
 
-    const authSocials = screen.getByTestId('auth-socials-signup-template-test-id');
-    const facebookIconBtn = within(authSocials).getByTestId(/icon-btn-facebook-test-id/i);
+    const facebookIconBtn = screen.getByTestId(/icon-btn-facebook-test-id/i);
 
     fireEvent.press(facebookIconBtn);
 
@@ -124,8 +111,7 @@ describe('SignUpTemplate', () => {
   it('should handle click events on Google icon - run handler once, not trigger other handlers', () => {
     render(<SignUpTemplate {...props} />);
 
-    const authSocials = screen.getByTestId('auth-socials-signup-template-test-id');
-    const googleIconBtn = within(authSocials).getByTestId(/icon-btn-google-test-id/i);
+    const googleIconBtn = screen.getByTestId(/icon-btn-google-test-id/i);
 
     fireEvent.press(googleIconBtn);
 
@@ -137,8 +123,7 @@ describe('SignUpTemplate', () => {
   it('should handle click events on LinkedIn icon - run handler once, not trigger other handlers', () => {
     render(<SignUpTemplate {...props} />);
 
-    const authSocials = screen.getByTestId('auth-socials-signup-template-test-id');
-    const linkedInIconBtn = within(authSocials).getByTestId(/icon-btn-linkedin-test-id/i);
+    const linkedInIconBtn = screen.getByTestId(/icon-btn-linkedin-test-id/i);
 
     fireEvent.press(linkedInIconBtn);
 
@@ -151,7 +136,7 @@ describe('SignUpTemplate', () => {
     render(<SignUpTemplate {...props} />);
 
     const footer = screen.getByTestId('auth-footer-signup-template-test-id');
-    const footerBtn = within(footer).getByTestId('btn-footer-test-id');
+    const footerBtn = screen.getByTestId('btn-footer-test-id');
 
     expect(footer).toHaveTextContent('SignUp Footer');
     expect(footerBtn).toHaveTextContent('Click me');
@@ -160,8 +145,7 @@ describe('SignUpTemplate', () => {
   it('should handle click events on footer button - run handler once', () => {
     render(<SignUpTemplate {...props} />);
 
-    const footer = screen.getByTestId('auth-footer-signup-template-test-id');
-    const footerBtn = within(footer).getByTestId('btn-footer-test-id');
+    const footerBtn = screen.getByTestId('btn-footer-test-id');
 
     fireEvent.press(footerBtn);
 

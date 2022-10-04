@@ -12,16 +12,14 @@ describe('SignUpForm', () => {
   const testPassword = 'testpassword';
 
   const props: Props = {
-    testID: 'signup-form-test-id',
     onSubmitSignUpForm: mockOnSubmitSignUpForm,
   };
 
   it('should render email and password inputs', () => {
     render(<SignUpForm {...props} />);
 
-    const signupForm = screen.getByTestId('signup-form-test-id');
-    const emailInput = within(signupForm).getByTestId('email-input-signup-form-test-id');
-    const passwordInput = within(signupForm).getByTestId('password-input-signup-form-test-id');
+    const emailInput = screen.getByTestId('email-input-signup-form-test-id');
+    const passwordInput = screen.getByTestId('password-input-signup-form-test-id');
 
     expect(emailInput).not.toBeNull();
     expect(passwordInput).not.toBeNull();
@@ -30,8 +28,7 @@ describe('SignUpForm', () => {
   it("should render submit button with 'Sign Up' text", () => {
     render(<SignUpForm {...props} />);
 
-    const signupForm = screen.getByTestId('signup-form-test-id');
-    const submitButton = within(signupForm).getByTestId('btn-submit-signup-test-id');
+    const submitButton = screen.getByTestId('btn-submit-signup-test-id');
 
     expect(submitButton).toHaveTextContent('Sign Up');
   });

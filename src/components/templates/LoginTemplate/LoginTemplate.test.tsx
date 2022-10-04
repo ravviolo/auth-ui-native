@@ -17,7 +17,6 @@ describe('LoginTemplate', () => {
   const testPassword = 'testpassword';
 
   const props: Props = {
-    testID: 'login-template-test-id',
     headerText: 'Login Header',
     footerText: 'Login Footer',
     footerBtnText: 'Click me',
@@ -32,18 +31,9 @@ describe('LoginTemplate', () => {
   it('should render login header with title', () => {
     render(<LoginTemplate {...props} />);
 
-    const loginTemplate = screen.getByTestId('login-template-test-id');
-    const heading = within(loginTemplate).getByTestId('auth-header-login-template-test-id');
+    const heading = screen.getByTestId('auth-header-login-template-test-id');
 
     expect(heading).toHaveTextContent('Login Header');
-  });
-
-  it('should render login form', () => {
-    render(<LoginTemplate {...props} />);
-
-    const loginForm = screen.getByTestId('login-form-test-id');
-
-    expect(loginForm).not.toBeNull();
   });
 
   it('should submit form with non-empty input fields - run submit handler once', () => {
@@ -95,15 +85,13 @@ describe('LoginTemplate', () => {
   it('should render authenticate through socials section, should display 3 icons for Facebook, Google, LinkedIn', () => {
     render(<LoginTemplate {...props} />);
 
-    const authSocials = screen.getByTestId('auth-socials-login-template-test-id');
-
-    const authSocialsIcons = within(authSocials).getAllByTestId(/icon-btn-([A-Z])\w+-test-id/i);
+    const authSocialsIcons = screen.getAllByTestId(/icon-btn-(facebook|google|linkedin)-test-id/i);
 
     expect(authSocialsIcons).toHaveLength(3);
 
-    const facebookIcon = within(authSocials).getByTestId(/icon-btn-facebook-test-id/i);
-    const googleIcon = within(authSocials).getByTestId(/icon-btn-google-test-id/i);
-    const linkedInIcon = within(authSocials).getByTestId(/icon-btn-linkedin-test-id/i);
+    const facebookIcon = screen.getByTestId(/icon-btn-facebook-test-id/i);
+    const googleIcon = screen.getByTestId(/icon-btn-google-test-id/i);
+    const linkedInIcon = screen.getByTestId(/icon-btn-linkedin-test-id/i);
 
     expect(facebookIcon).not.toBeNull();
     expect(googleIcon).not.toBeNull();
@@ -113,8 +101,7 @@ describe('LoginTemplate', () => {
   it('should handle click events on Facebook icon - run handler once, not trigger other handlers', () => {
     render(<LoginTemplate {...props} />);
 
-    const authSocials = screen.getByTestId('auth-socials-login-template-test-id');
-    const facebookIconBtn = within(authSocials).getByTestId(/icon-btn-facebook-test-id/i);
+    const facebookIconBtn = screen.getByTestId(/icon-btn-facebook-test-id/i);
 
     fireEvent.press(facebookIconBtn);
 
@@ -126,8 +113,7 @@ describe('LoginTemplate', () => {
   it('should handle click events on Google icon - run handler once, not trigger other handlers', () => {
     render(<LoginTemplate {...props} />);
 
-    const authSocials = screen.getByTestId('auth-socials-login-template-test-id');
-    const googleIconBtn = within(authSocials).getByTestId(/icon-btn-google-test-id/i);
+    const googleIconBtn = screen.getByTestId(/icon-btn-google-test-id/i);
 
     fireEvent.press(googleIconBtn);
 
@@ -139,8 +125,7 @@ describe('LoginTemplate', () => {
   it('should handle click events on LinkedIn icon - run handler once, not trigger other handlers', () => {
     render(<LoginTemplate {...props} />);
 
-    const authSocials = screen.getByTestId('auth-socials-login-template-test-id');
-    const linkedInIconBtn = within(authSocials).getByTestId(/icon-btn-linkedin-test-id/i);
+    const linkedInIconBtn = screen.getByTestId(/icon-btn-linkedin-test-id/i);
 
     fireEvent.press(linkedInIconBtn);
 
@@ -153,7 +138,7 @@ describe('LoginTemplate', () => {
     render(<LoginTemplate {...props} />);
 
     const footer = screen.getByTestId('auth-footer-login-template-test-id');
-    const footerBtn = within(footer).getByTestId('btn-footer-test-id');
+    const footerBtn = screen.getByTestId('btn-footer-test-id');
 
     expect(footer).toHaveTextContent('Login Footer');
     expect(footerBtn).toHaveTextContent('Click me');
@@ -162,8 +147,7 @@ describe('LoginTemplate', () => {
   it('should handle click events on footer button - run handler once', () => {
     render(<LoginTemplate {...props} />);
 
-    const footer = screen.getByTestId('auth-footer-login-template-test-id');
-    const footerBtn = within(footer).getByTestId('btn-footer-test-id');
+    const footerBtn = screen.getByTestId('btn-footer-test-id');
 
     fireEvent.press(footerBtn);
 

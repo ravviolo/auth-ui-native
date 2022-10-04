@@ -13,7 +13,6 @@ exports[`SignUpForm should match snapshot 1`] = `
       },
     ]
   }
-  testID="signup-form-test-id"
 >
   <View
     testID="email-input-signup-form-test-id"
