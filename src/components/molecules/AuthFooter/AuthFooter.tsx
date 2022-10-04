@@ -1,6 +1,7 @@
 import { Flex, TextButton } from 'components/atoms';
-import { StyleSheet, Text } from 'react-native';
-import { colors } from 'theme';
+import { Text } from 'react-native';
+
+import { styles } from './AuthFooter.styles';
 
 export interface Props {
   text: string;
@@ -22,17 +23,3 @@ export const AuthFooter = ({ btnText, testID, onPress, text }: Props) => {
     </Flex>
   );
 };
-
-const styles = StyleSheet.create({
-  footerBtn: {
-    textDecorationLine: 'underline',
-    textTransform: 'uppercase',
-  },
-  footerChild: {
-    color: colors.textLight,
-    marginHorizontal: 2,
-  },
-  footerContainer: {
-    justifyContent: 'center',
-  },
-});

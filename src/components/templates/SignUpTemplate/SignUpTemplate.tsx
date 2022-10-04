@@ -1,8 +1,10 @@
 import { Divider } from 'components/atoms';
 import { AuthFooter, AuthHeader, AuthSocials } from 'components/molecules';
 import { SignUpForm } from 'components/organisms';
-import { KeyboardAvoidingView, ScrollView, StatusBar, StyleSheet, View } from 'react-native';
+import { KeyboardAvoidingView, ScrollView, StatusBar, View } from 'react-native';
 import { colors } from 'theme';
+
+import { styles } from './SignUpTemplate.styles';
 
 export interface Props {
   onSubmitSignUpForm: (email: string, password: string) => void;
@@ -58,23 +60,3 @@ export const SignUpTemplate = ({
     </>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: colors.background,
-    flexGrow: 1,
-    paddingHorizontal: 30,
-    paddingVertical: 50,
-  },
-  footerContainer: {
-    flex: 1,
-  },
-  formContainer: {
-    height: 220,
-    marginVertical: 60,
-  },
-  keyboardView: { flex: 1 },
-  socialsContainer: {
-    marginVertical: 60,
-  },
-});

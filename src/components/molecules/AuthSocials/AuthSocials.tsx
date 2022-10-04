@@ -1,5 +1,6 @@
 import { Flex, IconButton } from 'components/atoms';
-import { StyleSheet } from 'react-native';
+
+import { styles } from './AuthSocials.styles';
 
 export interface Props {
   testID: string;
@@ -50,11 +51,3 @@ export const AuthSocials = ({ onPressFacebook, onPressGoogle, onPressLinkedIn, t
     </Flex>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    alignItems: 'center',
-    justifyContent: 'space-around',
-    paddingHorizontal: 55,
-  },
-});

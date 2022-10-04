@@ -1,6 +1,8 @@
-import { forwardRef, useImperativeHandle, useState } from 'react';
-import { StyleSheet, TextInput } from 'react-native';
+import { forwardRef, useImperativeHandle, useRef, useState } from 'react';
+import { TextInput } from 'react-native';
 import { colors } from 'theme';
+
+import { styles } from './InputField.styles';
 
 export interface Props {
   testID: string;
@@ -10,12 +12,14 @@ export interface Props {
 export interface TextInputHandle {
   getValue: () => string;
   clear: () => void;
+  setFocus: () => void;
 }
 
 export const InputField = forwardRef<TextInputHandle, Props>(
   ({ secureTextEntry = false, testID }, ref) => {
     const [value, setValue] = useState('');
     const [isFocused, setIsFocused] = useState(false);
+    const inputFocusRef = useRef<TextInput | null>(null);
 
     const toggleFocus = () => setIsFocused((focusState) => !focusState);
 
@@ -24,10 +28,12 @@ export const InputField = forwardRef<TextInputHandle, Props>(
       clear: () => {
         setValue('');
       },
+      setFocus: () => inputFocusRef.current?.focus(),
     }));
 
     return (
       <TextInput
+        ref={inputFocusRef}
         secureTextEntry={secureTextEntry}
         style={[
           styles.input,
@@ -44,13 +50,3 @@ export const InputField = forwardRef<TextInputHandle, Props>(
     );
   }
 );
-
-const styles = StyleSheet.create({
-  input: {
-    borderColor: colors.textLight,
-    borderRadius: 8,
-    borderWidth: 1,
-    height: 40,
-    padding: 10,
-  },
-});

@@ -1,7 +1,8 @@
 import { Button, Flex, TextInputHandle } from 'components/atoms';
 import { EmailInput, PasswordInput } from 'components/molecules';
-import { useRef } from 'react';
-import { StyleSheet } from 'react-native';
+import { useEffect, useRef } from 'react';
+
+import { styles } from './SignUpForm.styles';
 
 export interface Props {
   onSubmitSignUpForm: (email: string, password: string) => void;
@@ -11,6 +12,12 @@ export interface Props {
 export const SignUpForm = ({ onSubmitSignUpForm, testID }: Props) => {
   const emailRef = useRef<TextInputHandle | null>(null);
   const passwordRef = useRef<TextInputHandle | null>(null);
+
+  useEffect(() => {
+    emailRef.current?.setFocus();
+  }, []);
+
+  // todo: console.log('signup render');
 
   const onSubmit = () => {
     const email = emailRef.current?.getValue();
@@ -30,10 +37,3 @@ export const SignUpForm = ({ onSubmitSignUpForm, testID }: Props) => {
     </Flex>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'space-between',
-  },
-});

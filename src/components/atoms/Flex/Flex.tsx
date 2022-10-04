@@ -1,9 +1,11 @@
-import { StyleProp, StyleSheet, View, ViewStyle } from 'react-native';
+import { StyleProp, View, ViewStyle } from 'react-native';
+
+import { styles } from './Flex.styles';
 
 export interface Props {
   children: React.ReactNode;
   direction: 'column' | 'row';
-  testID: string;
+  testID?: string;
   style?: StyleProp<ViewStyle>;
 }
 
@@ -14,12 +16,3 @@ export const Flex = ({ children, direction, style, testID }: Props) => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  column: {
-    flexDirection: 'column',
-  },
-  row: {
-    flexDirection: 'row',
-  },
-});

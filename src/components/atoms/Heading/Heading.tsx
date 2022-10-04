@@ -1,5 +1,6 @@
-import { StyleSheet, Text } from 'react-native';
-import { colors } from 'theme';
+import { Text } from 'react-native';
+
+import { styles } from './Heading.styles';
 
 export interface Props {
   title: string;
@@ -13,12 +14,3 @@ export const Heading = ({ title, testID }: Props) => {
     </Text>
   );
 };
-
-const styles = StyleSheet.create({
-  heading: {
-    color: colors.text,
-    fontSize: 18,
-    fontWeight: 'bold',
-    textTransform: 'uppercase',
-  },
-});

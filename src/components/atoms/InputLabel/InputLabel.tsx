@@ -1,5 +1,6 @@
-import { StyleSheet, Text } from 'react-native';
-import { colors } from 'theme';
+import { Text } from 'react-native';
+
+import { styles } from './InputLabel.styles';
 
 export interface Props {
   testID: string;
@@ -13,10 +14,3 @@ export const InputLabel = ({ label, testID }: Props) => {
     </Text>
   );
 };
-
-const styles = StyleSheet.create({
-  label: {
-    color: colors.text,
-    marginBottom: 3,
-  },
-});

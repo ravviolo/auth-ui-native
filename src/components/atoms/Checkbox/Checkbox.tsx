@@ -1,7 +1,8 @@
 import ExpoCheckbox from 'expo-checkbox';
 import { forwardRef, useImperativeHandle, useState } from 'react';
-import { StyleSheet } from 'react-native';
 import { colors } from 'theme';
+
+import { styles } from './Checkbox.styles';
 
 export interface CheckboxHandle {
   getValue: () => boolean;
@@ -31,11 +32,4 @@ export const Checkbox = forwardRef<CheckboxHandle, Props>(({ testID }, ref) => {
       onValueChange={setIsChecked}
     />
   );
-});
-
-const styles = StyleSheet.create({
-  checkbox: {
-    borderRadius: 4,
-    borderWidth: 1,
-  },
 });

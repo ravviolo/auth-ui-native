@@ -8,9 +8,9 @@ import {
   TextInputHandle,
 } from 'components/atoms';
 import { EmailInput, PasswordInput } from 'components/molecules';
-import { useRef } from 'react';
-import { StyleSheet } from 'react-native';
-import { colors } from 'theme';
+import { useEffect, useRef } from 'react';
+
+import { styles } from './LoginForm.styles';
 
 export interface Props {
   testID: string;
@@ -22,6 +22,11 @@ export const LoginForm = ({ onSubmitLoginForm, onPressResetPassword, testID }: P
   const emailRef = useRef<TextInputHandle | null>(null);
   const passwordRef = useRef<TextInputHandle | null>(null);
   const rememberPasswordRef = useRef<CheckboxHandle | null>(null);
+
+  useEffect(() => {
+    emailRef.current?.setFocus();
+  }, []);
+  // todo: console.log('login render');
 
   const onSubmit = () => {
     const email = emailRef.current?.getValue();
@@ -57,18 +62,3 @@ export const LoginForm = ({ onSubmitLoginForm, onPressResetPassword, testID }: P
     </Flex>
   );
 };
-
-const styles = StyleSheet.create({
-  checkboxContainer: {
-    justifyContent: 'space-between',
-    width: 130,
-  },
-  container: {
-    flex: 1,
-    justifyContent: 'space-between',
-  },
-  secondaryButton: {
-    alignSelf: 'flex-end',
-    color: colors.textLight,
-  },
-});

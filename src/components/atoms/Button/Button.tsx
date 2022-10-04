@@ -1,5 +1,7 @@
-import { StyleSheet, Text, TouchableHighlight } from 'react-native';
+import { Text, TouchableHighlight } from 'react-native';
 import { colors } from 'theme';
+
+import { styles } from './Button.styles';
 
 export interface Props {
   title: string;
@@ -19,18 +21,3 @@ export const Button = ({ onPress, testID, title }: Props) => {
     </TouchableHighlight>
   );
 };
-
-const styles = StyleSheet.create({
-  btnContainer: {
-    alignItems: 'center',
-    backgroundColor: colors.primary,
-    borderRadius: 10,
-    elevation: 5,
-    padding: 15,
-  },
-  btnText: {
-    color: colors.textWhite,
-    letterSpacing: 1,
-    textTransform: 'uppercase',
-  },
-});
