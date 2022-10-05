@@ -12,7 +12,7 @@ export interface Props {
 export interface TextInputHandle {
   getValue: () => string;
   clear: () => void;
-  setFocus: () => void;
+  focus: () => void;
 }
 
 export const InputField = forwardRef<TextInputHandle, Props>(
@@ -28,7 +28,7 @@ export const InputField = forwardRef<TextInputHandle, Props>(
       clear: () => {
         setValue('');
       },
-      setFocus: () => inputFocusRef.current?.focus(),
+      focus: () => inputFocusRef.current?.focus(),
     }));
 
     return (

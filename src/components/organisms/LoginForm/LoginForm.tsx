@@ -1,3 +1,4 @@
+import { useFocusEffect } from '@react-navigation/native';
 import {
   Button,
   Checkbox,
@@ -8,7 +9,7 @@ import {
   TextInputHandle,
 } from 'components/atoms';
 import { EmailInput, PasswordInput } from 'components/molecules';
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 
 import { styles } from './LoginForm.styles';
 
@@ -22,10 +23,12 @@ export const LoginForm = ({ onSubmitLoginForm, onPressResetPassword }: Props) =>
   const passwordRef = useRef<TextInputHandle | null>(null);
   const rememberPasswordRef = useRef<CheckboxHandle | null>(null);
 
-  useEffect(() => {
-    emailRef.current?.setFocus();
-  }, []);
-  // todo: console.log('login render');
+  useFocusEffect(() => {
+    const timeoutID = setTimeout(() => {
+      emailRef.current?.focus();
+    }, 0);
+    return () => clearTimeout(timeoutID);
+  });
 
   const onSubmit = () => {
     const email = emailRef.current?.getValue();
@@ -39,6 +42,7 @@ export const LoginForm = ({ onSubmitLoginForm, onPressResetPassword }: Props) =>
       rememberPasswordRef.current?.clear();
     }
   };
+
   return (
     <Flex direction="column" style={styles.container}>
       <EmailInput ref={emailRef} testID="email-input-login-form-test-id" />

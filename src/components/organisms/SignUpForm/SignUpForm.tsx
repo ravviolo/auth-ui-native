@@ -1,6 +1,7 @@
+import { useFocusEffect } from '@react-navigation/native';
 import { Button, Flex, TextInputHandle } from 'components/atoms';
 import { EmailInput, PasswordInput } from 'components/molecules';
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 
 import { styles } from './SignUpForm.styles';
 
@@ -12,11 +13,13 @@ export const SignUpForm = ({ onSubmitSignUpForm }: Props) => {
   const emailRef = useRef<TextInputHandle | null>(null);
   const passwordRef = useRef<TextInputHandle | null>(null);
 
-  useEffect(() => {
-    emailRef.current?.setFocus();
-  }, []);
+  useFocusEffect(() => {
+    const timeoutID = setTimeout(() => {
+      emailRef.current?.focus();
+    }, 0);
 
-  // todo: console.log('signup render');
+    return () => clearTimeout(timeoutID);
+  });
 
   const onSubmit = () => {
     const email = emailRef.current?.getValue();
@@ -28,6 +31,7 @@ export const SignUpForm = ({ onSubmitSignUpForm }: Props) => {
       passwordRef.current?.clear();
     }
   };
+
   return (
     <Flex direction="column" style={styles.container}>
       <EmailInput ref={emailRef} testID="email-input-signup-form-test-id" />
