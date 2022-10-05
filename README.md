@@ -43,14 +43,14 @@ Install dependencies
 Start the server
 
 ```bash
-  npm start
+  npm run start:app
 ```
 
 [Read more on how to run Expo projects](https://docs.expo.dev/get-started/create-a-new-app/#opening-the-app-on-your-phonetablet).
 
 ### Storybook
 
-To visualize isolated components with Storybook open App.tsx file and set ```LOAD_STORYBOOK = true``` and run
+To visualize isolated components with Storybook run
 
 ```bash
   npm run storybook:open
